@@ -29,24 +29,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uur-5q-JR5">
+                                <rect key="frame" x="94" y="269" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="PXl-pu-3SN"/>
+                                    <constraint firstAttribute="width" constant="200" id="vgX-mg-0Yv"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BRU-MN-J80">
+                                <rect key="frame" x="84" y="581" width="221" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PZr-lm-XWb">
+                                        <rect key="frame" x="0.0" y="0.0" width="221" height="30"/>
+                                        <subviews>
+                                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="ikt-cB-74T">
+                                                <rect key="frame" x="-2" y="0.0" width="225" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Iz1-fi-j1Y"/>
+                                                    <constraint firstAttribute="width" constant="221" id="zYD-z5-AXL"/>
+                                                </constraints>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-8s-hBA">
-                                <rect key="frame" x="189" y="123" width="122" height="32"/>
+                                <rect key="frame" x="237" y="125" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Generate"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uur-5q-JR5">
-                                <rect key="frame" x="94" y="269" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="ikt-cB-74T">
-                                <rect key="frame" x="82" y="581" width="225" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uur-5q-JR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CUc-nu-tM2"/>
+                            <constraint firstItem="uur-5q-JR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mam-AI-RPi"/>
+                            <constraint firstItem="uur-5q-JR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zti-rN-7XI"/>
+                            <constraint firstItem="BRU-MN-J80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRy-H8-AFF"/>
+                            <constraint firstItem="uur-5q-JR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yJT-xl-F5q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
