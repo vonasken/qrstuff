@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,28 +22,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9b-1Z-BeS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9b-1Z-BeS">
                                 <rect key="frame" x="16" y="54" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uur-5q-JR5">
-                                <rect key="frame" x="94" y="269" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uur-5q-JR5">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="PXl-pu-3SN"/>
                                     <constraint firstAttribute="width" constant="200" id="vgX-mg-0Yv"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BRU-MN-J80">
-                                <rect key="frame" x="84" y="581" width="221" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-8s-hBA">
+                                <rect key="frame" x="237" y="125" width="122" height="32"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="Tcl-oZ-ANe"/>
+                                    <constraint firstAttribute="height" constant="32" id="hB7-pE-Htf"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Generate"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BRU-MN-J80">
+                                <rect key="frame" x="77" y="581" width="221" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PZr-lm-XWb">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PZr-lm-XWb">
                                         <rect key="frame" x="0.0" y="0.0" width="221" height="30"/>
                                         <subviews>
-                                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="ikt-cB-74T">
+                                            <slider hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="ikt-cB-74T">
                                                 <rect key="frame" x="-2" y="0.0" width="225" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Iz1-fi-j1Y"/>
@@ -50,27 +61,36 @@
                                                 </constraints>
                                             </slider>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ikt-cB-74T" secondAttribute="trailing" id="I90-xV-qWa"/>
+                                            <constraint firstItem="ikt-cB-74T" firstAttribute="top" secondItem="PZr-lm-XWb" secondAttribute="top" id="LtN-C9-mKp"/>
+                                            <constraint firstAttribute="bottom" secondItem="ikt-cB-74T" secondAttribute="bottom" id="fhy-AO-dKK"/>
+                                            <constraint firstItem="ikt-cB-74T" firstAttribute="leading" secondItem="PZr-lm-XWb" secondAttribute="leading" id="zMD-1k-bzc"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipJ-8s-hBA">
-                                <rect key="frame" x="237" y="125" width="122" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Generate"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uur-5q-JR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CUc-nu-tM2"/>
+                            <constraint firstItem="u9b-1Z-BeS" firstAttribute="trailing" secondItem="ipJ-8s-hBA" secondAttribute="trailing" id="JIN-QA-fu1"/>
+                            <constraint firstItem="u9b-1Z-BeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KV2-pY-jMf"/>
+                            <constraint firstItem="u9b-1Z-BeS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Klh-2C-Di2"/>
                             <constraint firstItem="uur-5q-JR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mam-AI-RPi"/>
                             <constraint firstItem="uur-5q-JR5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zti-rN-7XI"/>
+                            <constraint firstItem="ipJ-8s-hBA" firstAttribute="top" secondItem="u9b-1Z-BeS" secondAttribute="bottom" constant="41" id="a0t-dA-lMX"/>
                             <constraint firstItem="BRU-MN-J80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pRy-H8-AFF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BRU-MN-J80" secondAttribute="bottom" constant="56" id="qft-jI-qxH"/>
+                            <constraint firstItem="u9b-1Z-BeS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="34" id="rvO-OU-OKh"/>
                             <constraint firstItem="uur-5q-JR5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yJT-xl-F5q"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgQRCode" destination="uur-5q-JR5" id="SzW-ZC-VUe"/>
+                        <outlet property="slider" destination="ikt-cB-74T" id="W3w-QO-Kd5"/>
+                        <outlet property="textfield" destination="u9b-1Z-BeS" id="q5l-uG-DRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
